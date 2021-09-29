@@ -24,6 +24,11 @@ trained models, LAMMPS potentials, and plots.
 
 - Default: *2*
 
+``seed`` (integer): seed for random number routines in Numpy. Improves
+reproducibility. 
+
+- Default: *0*
+
 Data
 ----
 
@@ -31,11 +36,6 @@ Data
 preprocessing. Used during featurization, learning, and postprocessing.
 
 - Default: *“data.db”*
-
-``seed`` (integer): seed for random number routines in Numpy. Improves
-reproducibility. 
-
-- Default: *0*
 
 ``max_per_file`` (integer): maximum number of samples to take per file.
 Farthest-point-sampling is used to select subsets of samples. Typically,
