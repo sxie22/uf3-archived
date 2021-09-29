@@ -1,0 +1,48 @@
+outputs_path: ./outputs
+elements:
+degree: 2
+
+data:
+    db_path: data.db
+    seed: 0
+    max_per_file: -1
+    min_diff: 0.0
+    generate_stats: yes
+    progress: bar
+    vasp_pressure: no
+    sources:
+        path: ./data
+        pattern: "*"
+    keys:
+        atoms_key: geometry
+        energy_key: energy
+        force_key: forces
+        size_key: size
+
+basis:
+    r_min:
+    r_max:
+    resolution:
+    fit_offsets: yes
+    trailing_trim: 3
+    mask_trim: yes
+    knot_strategy: linear
+    knots_path: knots.json
+    
+features:
+    db_path: data.db
+    features_path: features.h5
+    n_cores: 4
+    parallel: python
+
+model:
+    model_path: model.json
+
+learning:
+    features_path: features.h5
+    splits_path: splits.json
+    weight: 0.5
+    regularizer:
+        ridge_1b: 1e-8
+        curvature_2b: 1e-8
+        curvature_3b: 1e-8
