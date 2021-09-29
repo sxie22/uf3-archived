@@ -33,9 +33,9 @@ Setup
 Getting Started
 ---------------
 
-Please see the examples in uf3/examples/tungsten_extxyz for basic usage.
+Please see the examples in examples/tungsten_extxyz and examples/NeXe_lammps for basic usage.
 
-Overviews for individual modules can be found in uf3/examples/modules
+Overviews for individual modules can be found in examples/modules
 (WIP).
 
 Standalone scripts and configuration generators/parsers are in
