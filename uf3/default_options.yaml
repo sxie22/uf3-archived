@@ -1,10 +1,10 @@
 outputs_path: ./outputs
 elements:
 degree: 2
+seed: 0
 
 data:
     db_path: data.db
-    seed: 0
     max_per_file: -1
     min_diff: 0.0
     generate_stats: yes
@@ -28,12 +28,16 @@ basis:
     mask_trim: yes
     knot_strategy: linear
     knots_path: knots.json
+    load_knots: no
+    dump_knots: no
     
 features:
     db_path: data.db
     features_path: features.h5
     n_cores: 4
     parallel: python
+    fit_forces: yes
+    column_prefix: x
 
 model:
     model_path: model.json
@@ -43,6 +47,6 @@ learning:
     splits_path: splits.json
     weight: 0.5
     regularizer:
-        ridge_1b: 1e-8
-        curvature_2b: 1e-8
-        curvature_3b: 1e-8
+        ridge_1b: 1.0e-8
+        curvature_2b: 1.0e-8
+        curvature_3b: 1.0e-8
